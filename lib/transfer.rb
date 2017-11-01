@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    return true unless sender.valid? || receiver.valid?
+    true unless sender.valid? || receiver.valid?
   end
 
   def execute_transaction
