@@ -16,12 +16,12 @@ class Transfer
     if self.valid? && @staus = "pending"
       @sender.withdraw(@amount)
       @receiver.deposit(@amount)
-      @status = "succesful"
+      @status = "complete"
     end
   end
 
   def reverse_transfer
-    if self.valid? && @status = "succesful"
+    if self.valid? && @status = "complete"
       @receiver.withdraw(@amount)
       @sender.deposit(@amount)
       @status = "reversed"
