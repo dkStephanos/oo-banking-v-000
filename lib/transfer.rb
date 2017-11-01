@@ -21,7 +21,7 @@ class Transfer
   end
 
   def reverse_transfer
-    if self.valid? @@ @status = "succesful"
+    if self.valid? && @status = "succesful"
       @receiver.withdraw(@amount)
       @sender.deposit(@amount)
       @status = "reversed"
