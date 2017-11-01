@@ -19,7 +19,9 @@ class Transfer
       @status = "complete"
     else
       @status = "rejected"
+      result = "Transaction rejected. Please check your account balance."
     end
+    result
   end
 
   def reverse_transfer
