@@ -11,4 +11,21 @@ class BankAccount
     raise ArgumentError.new("Can't change the name of a bank account!")
   end
 
+  def deposit(amount)
+    @balance += amount
+  end
+
+  def display_balance
+    "Your balance is $#{@balance}."
+  end
+
+  def valid?
+    true unless @balance < 0 || @status != "open"
+  end
+
+  def close_account
+    @balance = 0
+    @status = "closed"
+  end
+
 end
